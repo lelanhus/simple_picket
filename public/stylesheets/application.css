@@ -4,6 +4,27 @@ body {
   font-size: 14px;
 }
 
+table {
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+
+table th {
+  border-bottom: 2px solid #e5e5e5;
+}
+
+table tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+table th, table td {
+  border-right: 1px solid #e5e5e5;
+}
+
+table td {
+  padding: 4px;
+}
+
 a img {
   border: none;
 }

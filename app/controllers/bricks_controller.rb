@@ -5,4 +5,8 @@ class BricksController < InheritedResources::Base
     @brick = Brick.new
     @brick.brickizations.build
   end
+  
+  def index
+    @bricks = Brickization.all
+  end
 end
