@@ -4,6 +4,7 @@ gem 'rails', '3.0.3'
 gem 'inherited_resources'
 gem "nifty-generators"
 gem "nokogiri"
+gem "friendly_id", "~> 3.1"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
