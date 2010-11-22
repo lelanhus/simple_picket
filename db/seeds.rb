@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Gender.create([{ :name => "Male" }, { :name => "Female" }])
+Species.create([{ :name => "Human" }, { :name => "Mouse" }])
+State.create([{ :name => "Normal" }])

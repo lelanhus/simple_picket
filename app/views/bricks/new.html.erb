@@ -1,0 +1,51 @@
+
+<%= form_for(@brick) do |f| %>
+  
+  <fieldset>
+    <legend>Brick Info</legend>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+  </fieldset>
+  
+  <%= f.fields_for :brickizations do |brick| %>
+    <fieldset>
+      <legend>Value Info</legend>
+      <p>
+        <%= brick.collection_select :state_id, State.all, :id, :name, :prompt => "Select a State" %>
+      </p>
+      
+      <p>
+        <%= brick.collection_select :species_id, Species.all, :id, :name, :prompt => "Select a Species" %>
+      </p>
+      
+      <p>
+        <%= brick.collection_select :gender_id, Gender.all, :id, :name, :prompt => "Select a Gender" %>
+      </p>
+      
+      <p>
+        <%= brick.label :minimum %><br />
+        <%= brick.text_field :min %>
+      </p>
+      
+      <p>
+        <%= brick.label :maximum %><br />
+        <%= brick.text_field :max %>
+      </p>
+      
+      <p>
+        <%= brick.label :mean %><br />
+        <%= brick.text_field :mean %>
+      </p>
+      
+      <p>
+        <%= brick.label :standard_deviation %><br />
+        <%= brick.text_field :stdev %>
+      </p>
+    </fieldset>
+  <% end %>
+  
+  <p><%= f.submit %></p>
+  
+<% end %>

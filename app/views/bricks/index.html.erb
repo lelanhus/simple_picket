@@ -1,0 +1,30 @@
+
+<% @bricks.each do |brick| %>
+  <table>
+    <tr>
+      <th><%= brick.name %></th>
+    </tr>
+    <tr>
+      <th>State</th>
+      <th>Species</th>
+      <th>Gender</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Mean</th>
+      <th>Standard Deviation</th>
+    </tr>
+    <% brick.brickizations.each do |zap| %>
+      <tr>
+        <td><%= link_to zap.state.name, zap.state %></td>
+        <td><%= link_to zap.species.name, zap.species %></td>
+        <td><%= link_to zap.gender.name, zap.gender %></td>
+        <td><%= zap.min %></td>
+        <td><%= zap.max %></td>
+        <td><%= zap.mean %></td>
+        <td><%= zap.stdev %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
+<%= link_to "Add a Brick", new_brick_url %>
