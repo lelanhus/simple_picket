@@ -6,6 +6,7 @@ class State < ActiveRecord::Base
   
   has_friendly_id :name, :use_slug => true, :approximate_ascii => true
   
+  accepts_nested_attributes_for :brickizations
   
   validates :name, :presence => true, :uniqueness => true
 end

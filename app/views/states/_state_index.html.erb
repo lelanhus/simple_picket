@@ -1,0 +1,27 @@
+<% @states.each do |state| %>
+  <table>
+    <tr>
+      <th><%= state.name %></th>
+    </tr>
+    <tr>
+      <th>Brick</th>
+      <th>Species</th>
+      <th>Gender</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Mean</th>
+      <th>Standard Deviation</th>
+    </tr>
+    <% state.brickizations.each do |zap| %>
+      <tr>
+        <td><%= link_to zap.brick.name, zap.brick %></td>
+        <td><%= link_to zap.species.name, zap.species %></td>
+        <td><%= link_to zap.gender.name, zap.gender %></td>
+        <td><%= zap.min %></td>
+        <td><%= zap.max %></td>
+        <td><%= zap.mean %></td>
+        <td><%= zap.stdev %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

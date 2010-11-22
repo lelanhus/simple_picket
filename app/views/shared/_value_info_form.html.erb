@@ -1,0 +1,34 @@
+<fieldset>
+  <legend>Value Info</legend>
+  <p>
+    <%= f.collection_select :state_id, State.all, :id, :name, :prompt => "Select a State" %>
+  </p>
+  
+  <p>
+    <%= f.collection_select :species_id, Species.all, :id, :name, :prompt => "Select a Species" %>
+  </p>
+  
+  <p>
+    <%= f.collection_select :gender_id, Gender.all, :id, :name, :prompt => "Select a Gender" %>
+  </p>
+  
+  <p>
+    <%= f.label :minimum %><br />
+    <%= f.text_field :min %>
+  </p>
+  
+  <p>
+    <%= f.label :maximum %><br />
+    <%= f.text_field :max %>
+  </p>
+  
+  <p>
+    <%= f.label :mean %><br />
+    <%= f.text_field :mean %>
+  </p>
+  
+  <p>
+    <%= f.label :standard_deviation %><br />
+    <%= f.text_field :stdev %>
+  </p>
+</fieldset>

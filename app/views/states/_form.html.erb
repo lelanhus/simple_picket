@@ -1,0 +1,7 @@
+<%= form_for(@state) do |f| %>
+  <%= f.fields_for :brickizations do |value| %>
+    <%= render 'shared/value_info_form', :f => value %>
+  <% end %>
+  
+  <%= f.submit %>
+<% end %>
