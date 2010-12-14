@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101122092329) do
+ActiveRecord::Schema.define(:version => 20101214145044) do
 
   create_table "brickizations", :force => true do |t|
     t.integer  "brick_id"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(:version => 20101122092329) do
     t.string   "cached_slug"
   end
 
-  create_table "influenceships", :force => true do |t|
+  create_table "relationships", :force => true do |t|
     t.integer  "brick_id"
-    t.integer  "influence_id"
+    t.integer  "target_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

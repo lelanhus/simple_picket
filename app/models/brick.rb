@@ -4,11 +4,11 @@ class Brick < ActiveRecord::Base
   has_many :genders, :through => :brickizations
   has_many :species, :through => :brickizations
   
-  has_many :influenceships, :dependent => :destroy
-  has_many :influences, :through => :influenceships
+  has_many :targets, :dependent => :destroy
+  has_many :targets, :through => :relationships
   
-  has_many :non_influenceships, :class_name => "Influenceships", :foreign_key => "influence_id", :dependent => :destroy
-  has_many :non_influences, :through => :non_influenceships, :source => :brick
+  has_many :sources, :class_name => "Relationships", :foreign_key => "target_id", :dependent => :destroy
+  has_many :sources, :through => :sources, :source => :brick
   
   has_friendly_id :name, :use_slug => true, :approximate_ascii => true
   
