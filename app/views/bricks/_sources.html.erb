@@ -1,0 +1,6 @@
+<ul>
+  <% sources.each do |source| %>
+    <li><%= link_to source.name, source %></li>
+  <% end %>
+  <li><%= link_to "Add a new source", new_relationship_url(:target => @brick) %></li>
+</ul>

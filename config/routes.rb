@@ -1,7 +1,9 @@
 SimplePicket::Application.routes.draw do
   
   resources :bricks do
-    resources :genders, :species, :states
+    resources :genders, :species, :states, :relationships
+    get :targets, :on => :member
+    get :sources, :on => :member
   end
   
   resources :genders do
@@ -15,6 +17,8 @@ SimplePicket::Application.routes.draw do
   resources :states do
     resources :bricks, :genders, :species
   end
+  
+  resources :relationships  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

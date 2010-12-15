@@ -1,0 +1,22 @@
+<% form_for(@relationship) do |f| %>
+
+  <fieldset>
+    <legend>The Source</legend>
+    <%= f.collection_select :brick_id, Brick.all, :id, :name, :prompt => "Select a source please." %>
+  </fieldset>
+
+  <fieldset>
+    <legend>What's the target?</legend>
+    <%= f.collection_select :target_id, Brick.all, :id, :name, :prompt => "Select a target please." %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Additional Info.</legend>
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </fieldset>
+
+  <%= f.submit %>
+
+
+<% end %>

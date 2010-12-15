@@ -1,0 +1,6 @@
+<ul>
+  <% targets.each do |target| %>
+    <li><%= link_to target.name, target %></li>
+  <% end %>
+  <li><%= link_to "Add a new target", new_brick_relationship_url(@brick) %></li>
+</ul>

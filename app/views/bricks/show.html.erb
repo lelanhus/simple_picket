@@ -1,16 +1,5 @@
 <h1><%= @brick.name %></h1>
 
-<h2>Influenceships</h2>
-<table>
-  <tr>
-    <th>Brick</th>
-    <th>Influencing</th>
-    <th>Influenced By</th>
-  </tr>
-  
-  <% Brick.all.each do |brick| %>
-    <tr>
-      <td><%= link_to brick.name, brick %></td>
-    </tr>
-  <% end %>
-</table>
+<%= render 'targets', :targets => @brick.targets %>
+
+<%= render 'sources', :sources => @brick.sources %>

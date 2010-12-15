@@ -1,0 +1,3 @@
+Source: <%= link_to Brick.find(@relationship.brick_id).name, Brick.find(@relationship.brick_id) %>
+Target: <%= link_to Brick.find(@relationship.target_id).name, Brick.find(@relationship.target_id) %>
+Note: <%= @relationship.note %>
