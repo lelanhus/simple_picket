@@ -1,0 +1,6 @@
+<% if @brick.nil? %>
+  <p>It's really infeasible to display all relationships.  So, narrow it down by <%= link_to 'bricks', bricks_url %>.</p>
+<% else %>
+  <%= render 'targets', :targets => @brick.targets %>
+  <%= render 'sources', :sources => @brick.sources %>
+<% end %>
