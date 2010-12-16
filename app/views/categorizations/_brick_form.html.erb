@@ -1,0 +1,13 @@
+<%= form_for([@brick, @categorization]) do |f| %>
+  <fieldset>
+    <legend>Brick</legend>
+    <%= @brick.name %>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Category</legend>
+    <%= f.collection_select :category_id, @brick.potential_categories, :id, :name, :prompt => "Select a category please." %>
+  </fieldset>
+  
+  <%= f.submit %>
+<% end %>

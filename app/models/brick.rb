@@ -10,6 +10,9 @@ class Brick < ActiveRecord::Base
   has_many :sourcings, :class_name => "Relationship", :foreign_key => "target_id"
   has_many :sources, :through => :sourcings, :source => :brick
   
+  has_many :categorizations
+  has_many :categories, :through => :categorizations
+  
   has_friendly_id :name, :use_slug => true, :approximate_ascii => true
   
   accepts_nested_attributes_for :brickizations
@@ -22,6 +25,10 @@ class Brick < ActiveRecord::Base
   
   def potential_sources
     potentials(self.sources)
+  end
+  
+  def potential_categories
+    potentials(self.categories)
   end
   
   def potentials(objects)

@@ -1,0 +1,8 @@
+<h1><%= @category.name %></h1>
+
+<ul>
+  <% @category.bricks.each do |brick| %>
+    <li><%= link_to brick.name, brick %></li>
+  <% end %>
+  <li><%= link_to 'Add another brick', new_category_categorization_url(@category) %></li>
+</ul>

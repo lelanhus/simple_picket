@@ -1,0 +1,18 @@
+<h1>Categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Number of Bricks</th>
+  </tr>
+  
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= link_to category.name, category %></td>
+      <td><%= category.bricks.count %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td><%= link_to "Add a category", new_category_url %></td>
+  </tr>
+</table>
