@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101216002224) do
+ActiveRecord::Schema.define(:version => 20101216003047) do
 
   create_table "brickizations", :force => true do |t|
     t.integer  "brick_id"
@@ -54,6 +54,20 @@ ActiveRecord::Schema.define(:version => 20101216002224) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cached_slug"
+  end
+
+  create_table "journals", :force => true do |t|
+    t.integer  "pubmed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "references", :force => true do |t|
+    t.integer  "referenceable_id"
+    t.string   "commentable_type"
+    t.integer  "journal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "relationships", :force => true do |t|

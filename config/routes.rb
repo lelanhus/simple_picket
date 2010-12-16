@@ -22,7 +22,17 @@ SimplePicket::Application.routes.draw do
     resources :categorizations
   end
   
-  resources :relationships
+  resources :relationships do
+    resources :references
+  end
+  
+  resources :categorizations do
+    resources :references
+  end
+  
+  resources :brickization do
+    resources :references
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

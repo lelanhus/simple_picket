@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  referenceable_id: 1
+  commentable_type: MyString
+  journal_id: 1
+
+two:
+  referenceable_id: 1
+  commentable_type: MyString
+  journal_id: 1
