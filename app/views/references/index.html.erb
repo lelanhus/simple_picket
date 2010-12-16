@@ -1,0 +1,8 @@
+<ul>
+  <% @references.each do |reference| %>
+    <li><%= reference.pubmed_id %></li>
+  <% end %>
+  <li><%= new_reference_url %></li>
+  
+  <%= parent_class %>
+</ul>

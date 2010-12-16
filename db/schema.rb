@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20101216003047) do
 
   create_table "references", :force => true do |t|
     t.integer  "referenceable_id"
-    t.string   "commentable_type"
+    t.string   "referenceable_type"
     t.integer  "journal_id"
     t.datetime "created_at"
     t.datetime "updated_at"

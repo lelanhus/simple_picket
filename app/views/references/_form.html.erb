@@ -1,0 +1,13 @@
+<%= form_for([parent, @reference]) do |f| %>
+  
+  <fieldset>
+    <legend>Which reference?</legend>
+    
+    <%= f.collection_select :journal_id, Journal.all, :id, :pubmed_id, :prompt => "Select the reference please." %>
+    
+    <p>Need to change the collection select to only be the eligible journals for the class.</p>
+  </fieldset>
+  
+  <%= f.submit %>
+  
+<% end %>
