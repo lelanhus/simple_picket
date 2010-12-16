@@ -31,7 +31,11 @@ SimplePicket::Application.routes.draw do
   end
   
   resources :brickization do
-    resources :references
+    resources :references, :edges
+  end
+  
+  resources :edges do
+    resource :references
   end
   
   # The priority is based upon order of creation:
