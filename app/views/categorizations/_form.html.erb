@@ -9,5 +9,11 @@
     <%= f.collection_select :category_id, Category.all, :id, :name, :prompt => "Select a category please." %>
   </fieldset>
   
+  <fieldset>
+    <legend>Additional Info</legend>
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </fieldset>
+  
   <%= f.submit %>
 <% end %>

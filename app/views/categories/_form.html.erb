@@ -4,5 +4,11 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </fieldset>
+  
+  <fieldset>
+    <legend>Additional Info</legend>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </fieldset>
   <%= f.submit %>
 <% end %>

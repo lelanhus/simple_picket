@@ -9,5 +9,11 @@
     <%= @category.name %>
   </fieldset>
   
+  <fieldset>
+    <legend>Additional Info</legend>
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </fieldset>
+  
   <%= f.submit %>
 <% end %>
