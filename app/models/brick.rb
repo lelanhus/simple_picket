@@ -1,4 +1,6 @@
 class Brick < ActiveRecord::Base
+  include Potentials
+  
   has_many :brickizations, :dependent => :destroy
   has_many :states, :through => :brickizations
   has_many :genders, :through => :brickizations
@@ -19,24 +21,6 @@ class Brick < ActiveRecord::Base
   
   validates :name, :presence => true, :uniqueness => true
   
-  def potential_targets
-    potentials(self.targets)
-  end
-  
-  def potential_sources
-    potentials(self.sources)
-  end
-  
-  def potential_categories
-    potentials(self.categories)
-  end
-  
-  def potentials(objects)
-    a = Brick.all
-    a.delete(self)
-    a.delete(objects)
-    return a unless a.nil?
-    return []
-  end
+
   
 end
