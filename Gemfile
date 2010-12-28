@@ -7,6 +7,11 @@ gem "nokogiri"
 gem "friendly_id", "~> 3.1"
 gem "hpricot"
 
+group :test do
+  gem 'factory_girl_rails'
+end
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
