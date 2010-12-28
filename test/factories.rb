@@ -38,3 +38,13 @@ Factory.define :edge do |f|
   f.association :brickization
   f.association :target, :factory => :brickization
 end
+
+Factory.define :reference do |f|
+  f.referenceable_type "Brickization"
+  f.sequence(:referenceable_id) { |n| n.to_i }
+  f.association :journal
+end
+
+Factory.define :journal do |f|
+  f.sequence(:pubmed_id) { |n| n.to_i }
+end
